@@ -1,0 +1,19 @@
+[% BLOCK 'service-providers' %]
+<div class="service-providers">
+    [% IF providers %]
+    <ul>
+        [% FOREACH provider IN providers %]
+            <li>[% INCLUDE 'provider-link' %]</li>
+        [% END %]
+    </ul>
+    [% ELSIF provider %]
+        [% INCLUDE 'provider-link' %]
+    [% ELSE %]
+    <h3>No service providers</h3>
+    [% END %]
+</div>
+[% END %]
+
+[% BLOCK 'provider-link' %]
+<a href="/auth/[% provider %]">[% provider %]</a>
+[% END %]

@@ -1,0 +1,6 @@
+[% USE Dumper %]
+[% IF session.size %]
+    [% Dumper.dump_html( session ) %]
+[% ELSE %]
+    <p class="empty-session">Empty session</p>
+[% END %]
