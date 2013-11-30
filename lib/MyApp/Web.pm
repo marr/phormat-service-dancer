@@ -1,6 +1,6 @@
 package MyApp::Web;
 use Dancer ':syntax';
-use Dancer::Plugin::Crowdtilt::OAuth;
+use Dancer::Plugin::Auth::Extensible;
 
 our $VERSION = '0.1';
 

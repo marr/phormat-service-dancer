@@ -3,7 +3,7 @@
 # all the settings in this file will be loaded at Dancer's startup.
 
 # Your application's name
-appname: "lolauth"
+appname: "phormat"
 
 # The default layout to use for your application (located in
 # views/layouts/main.tt)
@@ -14,6 +14,17 @@ layout: "main"
 # about unicode within your app when this setting is set (recommended).
 charset: "UTF-8"
 
+plugins:
+    Auth::Extensible:
+        realms:
+            users:
+                provider: Phormat
+                users:
+                    - user: admin
+                      pass: password
+                      roles:
+                        - Developer
+  
 session: 'YAML'
 
 template: "template_toolkit"
